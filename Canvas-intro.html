@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #canvas{
+            border: 2px solid black;
+            cursor: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introduksjon til canvas</h1>
+
+    <canvas id="canvas" width="300px" height="
+    500px"></canvas>
+
+    <script>
+        // Henter canvas fra DOM
+
+        let canvas = document.getElementById('canvas')
+
+        // ctx står for kontekst
+        let ctx = canvas.getContext('2d')
+
+        let red = Math.floor(Math.random()*256)
+        let green = Math.floor(Math.random()*256)
+        let blue = Math.floor(Math.random()*256)
+
+        function tegnSirkel(e){
+
+            //Tømmer lærret
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            // tegner en sirkel
+
+            ctx.beginPath()
+
+            let x = e.offsetX
+            let y = e.offsetY
+            let r = 15
+
+            ctx.arc(x, y, r, 0, 2*Math.PI)
+            ctx.stroke()
+
+            ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`
+            ctx.fill()
+        }
+
+        function endreFarge(){
+           
+            let red = Math.floor(Math.random()*256)
+            let green = Math.floor(Math.random()*256)
+            let blue = Math.floor(Math.random()*256)
+
+            ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`
+            ctx.fill()
+        }
+
+        canvas.addEventListener('mousemove', tegnSirkel)
+
+        canvas.addEventListener('click', endreFarge)
+        
+        
+
+        canvas.addEventListener
+
+</script>
+</body>
+</html>
