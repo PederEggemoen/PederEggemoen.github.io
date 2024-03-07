@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pizzeria</h1>
+    <h2>Pizzabestilling</h2>
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+        <!-- Pizzabunn -->
+        <h3>Type pizzabunn</h3>
+        <label>
+            <input type="radio" name="bunn" value="Vanlig" checked>Vanlig
+        </label>
+        <label>
+            <input type="radio" name="bunn" value="Fullkorn">Fullkorn
+        </label>
+        <label>
+            <input type="radio" name="bunn" value="Glutenfri">Glutenfri
+        </label>
+
+        <!-- Topping -->
+        <h3>Topping</h3>
+        <label>
+            <input type="checkbox" value="Skinke">Skinke
+        </label>
+        <label>
+            <input type="checkbox" value="Ost">Ost
+        </label>
+        <label>
+            <input type="checkbox" value="Pepperoni">Pepperoni
+        </label>
+        <label>
+            <input type="checkbox" name="topping1" value="Ananas">Ananas
+        </label>
+        <label>
+            <input type="checkbox" name="topping2" value="Jalapeño">Jalapeño
+        </label>
+        <label>
+            <input type="checkbox" name="topping3" value="Mozarella">Mozarella
+        </label>
+        <label>
+            <input type="checkbox" name="topping4" value="Tomatsaus">Tomatsaus
+        </label>
+        <label>
+            <input type="checkbox" name="topping5" value="Tomat">Tomat
+        </label>
+        <label>
+            <input type="checkbox" name="topping6" value="Paprika">Paprika
+        </label>
+        <label>
+            <input type="checkbox" name="topping7" value="Lok">Løk
+        </label>
+        <label>
+            <input type="checkbox" name="topping8" value="Pesto">Pesto
+        </label>
+        
+
+
+
+        <h3>Størrelse</h3>
+        <select>
+            <option value="Liten">Liten</option>
+            <option value="Middels" selected>Middels</option>
+            <option value="Stor">Stor</option>
+        </select>
+
+        <h3>Annet?</h3>
+        <textarea placeholder="Annen informasjon..."></textarea>
+
+
+        <button type="submit">Send inn din bestilling</button>
+    </form>
+
+    <h2>tilbakemelding</h2>
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+        <input type="text" name="navn" placeholder="Navn" required>
+        <input type="number" name="tlf" placeholder="tlf" required>
+
+        <textarea name="tilbakemelding" placeholder="Din tilbakemeldig.."></textarea>
+
+        <label>Hvor god er denne nettsiden?
+            <select>
+                <option value="lav">Lav</option>
+                <option value="middels">Middels</option>
+                <option value="høy">Høy</option>
+            </select>
+
+        </label>
+
+        <button type="submit">Send inn skjema</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
